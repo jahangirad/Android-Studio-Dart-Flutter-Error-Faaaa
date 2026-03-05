@@ -1,0 +1,16 @@
+<idea-plugin>
+    <id>org.faaaa.FaaaaSound</id>
+    <name>Faaaa Sound</name>
+    <vendor url="https://appnixor.com">Appnixor</vendor>
+
+    <description><![CDATA[
+    Plays a sound when an error is detected in the code.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <annotator language="XML" implementationClass="org.faaaa.FaaaaAnnotator"/>
+        <annotator language="Dart" implementationClass="org.faaaa.FaaaaAnnotator"/>
+    </extensions>
+</idea-plugin>
