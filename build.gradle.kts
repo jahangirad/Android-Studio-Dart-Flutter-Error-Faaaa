@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "org.faaaa"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -29,10 +29,6 @@ intellij {
     version.set("2023.1.1")
 }
 
-//intellij {
-//    localPath.set("C:/Program Files/Android/Android Studio")
-//}
-
 tasks {
     withType<JavaCompile> {
         sourceCompatibility = "17"
@@ -46,6 +42,14 @@ tasks {
         // This still ensures your plugin is marked as compatible with Android Studio
         sinceBuild.set("231")
         untilBuild.set("253.*")
+    }
+
+    buildSearchableOptions {
+        enabled = false
+    }
+
+    jarSearchableOptions {
+        enabled = false
     }
 
     signPlugin {
